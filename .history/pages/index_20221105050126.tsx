@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function Home  ( {posts}: Props) {
-  
+  console.log(posts);
   return (
     <div className=" max-w-7xl mx-auto">
       <Head>
@@ -63,7 +63,7 @@ export const getServerSideProps = async () =>{
 
   const posts = await sanityClient.fetch(query);
   
- return {
+  return {
     props:{
       posts,
     }
